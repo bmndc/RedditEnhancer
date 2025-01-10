@@ -508,7 +508,7 @@ export function themePostBackgroundColour(value) {
 			const styleElement = document.createElement('style');
 			styleElement.id = 're-theme-post-bg-colour';
 			styleElement.textContent = `:root shreddit-app[routename="post_page"] .grid-container.grid,
-			 							:root shreddit-app[routename="comment_page"] .grid-container.grid {
+			 							:root shreddit-app[routename="comments_page"] .grid-container.grid {
 											--color-neutral-background: var(--re-theme-post-bg) !important;
 										}
 										shreddit-post,
@@ -517,12 +517,6 @@ export function themePostBackgroundColour(value) {
 											--shreddit-content-background: transparent !important;
 											--color-neutral-background: var(--re-theme-post-bg) !important;
 											backdrop-filter: blur(var(--re-theme-blur)) !important;
-										}
-										shreddit-app[routename="post_page"] main.main {
-											padding: .5rem 1rem;
-										}
-										shreddit-app[routename="post_page"] shreddit-post {
-											margin: 0 -0.5rem;
 										}
 										div[slot="post-insights-panel"] > faceplate-tracker > div {
 											background-color: inherit !important;
