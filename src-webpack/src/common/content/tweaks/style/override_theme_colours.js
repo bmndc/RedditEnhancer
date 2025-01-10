@@ -517,7 +517,7 @@ export function themePostBackgroundColour(value) {
 											--color-neutral-background: var(--re-theme-post-bg) !important;
 											backdrop-filter: blur(var(--re-theme-blur)) !important;
 										}
-										shreddit-app[routename="post_page"] main#main-content {
+										shreddit-app[routename="post_page"] main.main {
 											padding: .5rem 1rem;
 										}
 										shreddit-app[routename="post_page"] shreddit-post {
@@ -530,7 +530,7 @@ export function themePostBackgroundColour(value) {
 											--color-secondary-background-hover: rgba(0,0,0,0.3) !important;
 											--button-border-color: rgba(0,0,0,0.6) !important;
 										}
-										[pagetype="search_results"] #main-content > div {
+										[pagetype="search_results"] main.main > div {
 											--color-neutral-background: var(--re-theme-post-bg) !important;
 											backdrop-filter: blur(var(--re-theme-blur)) !important;
 											border-radius: 8px;
@@ -870,7 +870,7 @@ export function themePostBorderColour(value) {
 			const styleElement = document.createElement('style');
 			styleElement.id = 're-theme-post-border-colour';
 			styleElement.textContent = `article > shreddit-post,
-										main#main-content search-telemetry-tracker > div:not([data-testid="search-scope-switcher"]),
+										main.main search-telemetry-tracker > div:not([data-testid="search-scope-switcher"]),
 										div[data-testid="search-crosspost-unit"] div:has(> search-telemetry-tracker) {
 											border: solid 1px var(--re-theme-post-border);
 										}`;
