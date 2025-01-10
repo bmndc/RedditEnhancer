@@ -507,7 +507,8 @@ export function themePostBackgroundColour(value) {
 			document.documentElement.style.setProperty('--re-theme-post-bg', result.themePostBackgroundColourCSS);
 			const styleElement = document.createElement('style');
 			styleElement.id = 're-theme-post-bg-colour';
-			styleElement.textContent = `:root .grid-container.grid {
+			styleElement.textContent = `:root shreddit-app[routename="post_page"] .grid-container.grid,
+			 							:root shreddit-app[routename="comment_page"] .grid-container.grid {
 											--color-neutral-background: var(--re-theme-post-bg) !important;
 										}
 										shreddit-post,
